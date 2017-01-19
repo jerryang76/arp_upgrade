@@ -9,8 +9,8 @@ ctx.verify_mode = ssl.CERT_NONE
 def help():
 	print 'upgrade <Destination IP> <port> <username> <password> <http,https>'
 	print 'example:'
-	print 'upgrade 1.1.1.1 443 root password https'
-	print 'upgrade 1.1.1.1 80 root password http'
+	print 'upgrade 1.1.1.1 443 username password https'
+	print 'upgrade 1.1.1.1 80 username password http'
 	sys.exit()
 
 
@@ -156,6 +156,9 @@ def factory():
 	params = factory_params
 	factory_page = http_post(prot,url,params)
 
+# Get FXS line number
+	
+
 login()
 # get status MAC, HW, Driver, Firmware
 mac, firmware_long, firmware_short = status()
@@ -173,5 +176,6 @@ mac, firmware_long, firmware_short = status()
 # factory default and save	
 factory()
 save()
+# Get FXS line number
 
 # Ring 1 FXS

@@ -76,10 +76,10 @@ while True:
 # pass to 2ndary program
 import os
 #Execute the command (a string) in a subshell.
-os.system(r'"C:/Documents and Settings/flow_model/flow.exe"')
-os.system('"C:/Windows/System32/notepad.exe"')
+#os.system(r'"C:/Documents and Settings/flow_model/flow.exe"')
+os.system('"upgrade.exe "+ip+" 80 username password http"')
 #不回傳startfile() returns as soon as the associated application is launched.感覺有點等待
-os.startfile("C:\Documents and Settings\flow_model\flow.exe")
+#os.startfile("C:\Documents and Settings\flow_model\flow.exe")
 # KeyboardInterrupt
 	except KeyboardInterrupt:
 		print '\n[*] User Request Shutdown'

@@ -80,7 +80,7 @@ while var == 1:
 	# p=sniff(prn=arp_monitor_callback, filter="arp and ether[6:4]&0xFFFFFF00==0x000c2a00 or ether[0:4]&0xFFFFFF00==0x000c2a00", store=1, count=1)
 	# p=sniff(prn=arp_monitor_callback, filter="arp and ether[0:4]&0xFFFFFF00==0x000c2a00", store=1, count=1)
 
-	sniff(prn=arp_monitor_callback, filter="arp", count=1)
+	p=sniff(prn=arp_monitor_callback, filter="arp", count=1)
 
 	# wrpcap('packetss.pcap', p)
 	# for b in str(arp_result):
